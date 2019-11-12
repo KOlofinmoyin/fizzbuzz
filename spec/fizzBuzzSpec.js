@@ -12,6 +12,11 @@ describe('Fizzbuzz', function() {
       expect(fizzbuzz.isDivisibleByFive(5)).toBe(true);
     });
 
+    it('is divisible by 3 and 5', function(){
+      fizzbuzz = new Fizzbuzz();
+      expect(fizzbuzz.isDivisibleByThreeAndFive(15)).toBe(true);
+    });
+
   });
   describe('knows when a number is NOT', function(){
     it('divisible by 3', function(){
@@ -22,6 +27,11 @@ describe('Fizzbuzz', function() {
     it('divisible by 5', function(){
       fizzbuzz = new Fizzbuzz();
       expect(fizzbuzz.isDivisibleByFive(6)).toBe(false);
+    });
+
+    it('is not divisible by 3 or 5', function(){
+      fizzbuzz = new Fizzbuzz();
+      expect(fizzbuzz.isDivisibleByThreeAndFive(17)).toBe(false);
     });
   });
 

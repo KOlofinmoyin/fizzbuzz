@@ -37,6 +37,17 @@ describe('Fizzbuzz', function() {
       expect(fizzbuzz.says(3)).toEqual("Fizz");
     });
 
+    it('Buzz when a number is divisible by 5', function(){
+      expect(fizzbuzz.says(5)).toEqual("Buzz");
+    });
+
+    it('FizzBuzz when a number is divisible by 3 & 5',function(){
+      expect(fizzbuzz.says(15)).toEqual("FizzBuzz");
+    });
+
+    it('number when number is NOT divisible by 3 or 5 ',function(){
+      expect(fizzbuzz.says(7)).toEqual(7);
+    });
   });
 
 });
